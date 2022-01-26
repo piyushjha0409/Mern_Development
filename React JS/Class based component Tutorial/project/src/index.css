@@ -1,0 +1,48 @@
+.cards {
+  width: 25%;
+  background-color: grey;
+  border-radius: 2vw;
+}
+.cards:hover {
+  background-color: aquamarine;
+  transform: scale(1.1);
+}
+img {
+  padding-bottom: 1px;
+}
+.title {
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+}
+.desc p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin: 2vw;
+}
+.cards a {
+  display: flex;
+  justify-content: center;
+  margin: 1vw 6vw;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+}
+.cards a:hover {
+  background-color: whitesmoke;
+  color: black7;
+}
+
+.container button {
+      display: flexbox;
+      flex-direction: row;
+      justify-content: space-between;
+      border-radius: 5px;
+      background-color: black;
+      color: blanchedalmond;
+}
+.btn2{
+  float: right;
+}

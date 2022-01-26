@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+
+//My News api key : 8f298774375c430a9a7a5d1ae3e6e410
