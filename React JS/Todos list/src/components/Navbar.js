@@ -2,37 +2,36 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
-    return (
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <a className="navbar-brand" href="#">{props.title}</a>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
+  return (
+    <nav className='bg-dark text-light shadow-lg py-2'>
 
-  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
-        <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="#">About</a>
-      </li>
-    </ul>
-    { props.searchbar ? <form className="form-inline my-2 my-lg-0">
-      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>: "There is no searchbar!"}
-  </div>
-</nav>
-    )
+      <div className='inline mx-7 '>
+        {/* This will be the logo of the app  */}
+        <div className='inline decoration-wavy'>
+          <a className='hover:no-underline'>TodoList</a>
+        </div>
+      </div>
+
+      <div className='inline space-x-4'>
+        {/* Primary Componenents of the navbar  */}
+        <div className='inline'>
+          <a className='hover:no-underline' href="/">Home</a>
+        </div>
+
+        <div className='inline'>
+          <a className='hover:no-underline' href="/about">About</a>
+        </div>
+      </div>
+    </nav>
+  )
 }
 
-{/* Props*/}
+{/* Props*/ }
 Navbar.defaultProps = {
-    title: "This is your default title",
-    searchbar: true
+  title: "This is your default title",
+  searchbar: true
 }
 Navbar.propType = {
-    title : PropTypes.string,
-    searchbar: PropTypes.bool
+  title: PropTypes.string,
+  searchbar: PropTypes.bool.isRequired
 }

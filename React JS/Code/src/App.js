@@ -20,7 +20,7 @@ function App() {
     initTodo = JSON.parse(localStorage.getItem("todos"));
   }
 
-
+  //delete function
   const onDelete = (todo) => {
     console.log("I am ondelete of todo", todo);
     // Deleting this way in react does not work
@@ -30,10 +30,12 @@ function App() {
     setTodos(todos.filter((e) => {
       return e !== todo;
     }));
+
     console.log("deleted", todos)
     localStorage.setItem("todos", JSON.stringify(todos));
   }
 
+  //add function in the todo
   const addTodo = (title, desc) => {
     console.log("I am adding this todo", title, desc)
     let sno;
@@ -52,6 +54,7 @@ function App() {
     console.log(myTodo);
   }
 
+  //setstate
   const [todos, setTodos] = useState(initTodo);
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -74,7 +77,7 @@ function App() {
             <About />
           </Route> 
         </Switch> 
-      <Footer />
+      <Footer/>
     </Router>
     </>
   );

@@ -1,22 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export const addTodo = () => {
+export const AddTodo = ({addTodo}) => {
+  const[title, setTitle] = useState("");
+  const[desc, setDesc] = useState("");
+
+  // function for submitting  the todo
+  const submit = (e)=>{
+    e.preventDefault();
+    if(!title || !desc){
+      alert("Title or description required!!");
+    }else{
+      addTodo(title, desc)
+      setTitle("");
+      setDesc("");
+    }
+  }
     return (
-        <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <div className='container my-3'>
+    <h3 className='my-4 text-white'>Add Todo Here!</h3>
+  <form onSubmit={submit}>
+  <div class="mb-3">
+    <label htmlFor="title" className="form-label">Todo Title</label>
+    <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="form-control w-25" id="title" aria-describedby="emailHelp" />
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+
+  <div className="mb-3">
+    <label htmlFor="desc" className='form-label'>Todo Description</label>
+    <input type="text" value={desc} onChange={(e) => setDesc(e.target.value)} className="form-control w-25" id="desc" />
   </div>
-  <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  <button type="submit" className="btn btn-sm btn-success text-black">Add Todo</button>
+      </form>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-    )
+  )
 }

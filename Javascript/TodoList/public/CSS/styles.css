@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(221, 205, 205);
+}
+h1{
+    text-align: center;
+}
+ul{
+    text-decoration: none;
+}
+
+input:checked+p {
+    text-decoration: line-through;
+}

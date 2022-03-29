@@ -1,0 +1,23 @@
+"This is the Cheatsheet for the MongoDB commands for Databases" 
+1.View all the databases and then //show dbs
+2.Create or edit the new database :: //use db_name 
+3.View Current databases :: //db
+4.If you want to delete the database :: //db.dropDatabase()
+
+"MongoDB commands for collections":
+//Show Collections
+"Creating the collection comments in the databases"
+//db.createCollection("Comments")
+
+"Deleting the collection name"
+//db.<collection_name>.drop()
+
+"MongoDB commands for rows"
+Insert rows:
+db.comments.insertOne({
+"name": "Piyush Jha",
+"age": 19,
+"place": "New Delhi"
+})
+//Or You can Insert many data at one time: 
+db.<collection_name>.insertMany([{_id: 23, name: "Piyush kumar"},{_id:45, name:"Shubhangi Saundriyal"},{_id:69, name:"Sidharth Arora"}])

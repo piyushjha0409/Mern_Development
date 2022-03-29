@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To do List</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+  <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex justify-center items-center space-x-4">
+    <h1 class="text-slate-600"> <%= listTitle %></h1>
+  </div>
+<div class="p-6 max-w-sm mx-auto bg-sky-300 rounded-xl shadow-lg space-x-4 mt-10">
+   <% for(var i=0; i<item.length; i++){ %>
+     <form action="/delete" method="post">
+     <div class="min-h-min flex items-center border-b-2">
+      <input class="strikethrough" type="checkbox" value="<%= item._id %>" onchange="this.form.submit()">
+      <p> <%= item.name %></p>
+     </div>
+     </form>
+     <% } %>
+     <!-- We have to take the input form  -->
+    <form class="p-6 mx-auto flex justify-center space-x-2" action="/" method="post">
+    <input class="text-slate-500 p-1" type="text" name="newItem">
+    <button class ="bg-yellow-600 hover:bg-sky-800 rounded-full text-2xl p-1" type="submit" name="">+</button>
+    <!-- <h1 class="text-blue-900">Hey There!</h1> -->
+</form>
+</div>
+  </body>
+</html>

@@ -39,8 +39,8 @@ function App() {
     <>
       <Router>
         <Navbar
-          title="TextAnalyzer :)"
-          aboutText="About"
+          title="TextAnalyzer :)
+          aboutText= "/About"
           mode={mode}
           toggleMode={toggleMode}
         />
