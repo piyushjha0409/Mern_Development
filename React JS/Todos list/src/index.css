@@ -5,8 +5,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
    /* background-image: url('/src/background.jpg'); */
-   background-image: url('/public/Background.jpg');
+   background-image: url('/build/Background.jpg');
+   background-position: center bottom;
    background-size: cover;
+  
 }
 
 code {

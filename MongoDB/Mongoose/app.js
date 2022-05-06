@@ -42,15 +42,15 @@ const piyush = new Person({
 
 
 
-// Person.insertMany([Gauti, Shubhi, Sid, piyush], function(err){
-//     if(err){
-//         console.log(err);
-//         console.log("Error Found in the database couldnt able to add it to the databases");
-//     }
-//     else{
-//         console.log("Succesfully added all the person details to the database!");
-//     }
-// });
+Person.insertMany([Gauti, Shubhi, Sid, piyush], function(err){
+    if(err){
+        console.log(err);
+        console.log("Error Found in the database couldnt able to add it to the databases");
+    }
+    else{
+        console.log("Succesfully added all the person details to the database!");
+    }
+});
 
 
 // app.get('/allDataQuestionPaper',async function(req, res)
@@ -126,13 +126,14 @@ Person.aggregate([{
 // // }
 // };
 
-Person.deleteMany({}, function(err){
-    if(err){
-        console.log(err);
-    }else{
-        console.log("Successfully deleted!")
-    }
-})
+//deletion of the database
+// Person.deleteMany({}, function(err){
+//     if(err){
+//         console.log(err);
+//     }else{
+//         console.log("Successfully deleted!")
+//     }
+// })
 
 //Finding the databases 
 

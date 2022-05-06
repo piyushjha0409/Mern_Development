@@ -1,20 +1,28 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const User = require('./User');
 
-//creating the blogschema
-const NoteSchema = new Schema({
-    title:{
-        type:String,
-        required:true
+//creating a new schema
+var Schema = mongoose.Schema
+const NotesSchema = new Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
     },
-    desc:{
-     type:String,
-     required:true
+    title: {
+        type: String,
+        required: true,
     },
-    date:{
-        type:Date,
-        default: Date.now
+    description: {
+        type: String,
+        required: true,
+    },
+    date: {
+        type: Date,
+        default: Date.now,
     }
-})
+});
 
-//exporting the schema
-modules.export = mongoose.model("Notes", NoteSchema)
+const Notes = mongoose.model('Notes', NotesSchema);
+// User.createIndexes();
+//exporting the model 
+module.exports = Notes;

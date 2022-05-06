@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+body {
+  margin: 0;
+  font-family: Rubik;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   /* background-image: url('/src/background.jpg'); */
+   background-image: url('/public/Background.jpg');
+   background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
