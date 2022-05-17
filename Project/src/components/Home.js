@@ -1,8 +1,17 @@
-import React from 'react'
-import './Home.css'
+import React, {useContext} from 'react'
+import Notes from './Notes'
+import noteContext from '../Context/notes/NoteContext'
+
+
 const Home = () => {
+  const context = useContext(noteContext);
+  const {notes, setnotes} = context;
   return (
-    <div>This is Home</div>
+    <div className='bg-neutral-900'>
+    <h1 className='flex justify-center text-white'>Add a note</h1>
+     
+    <Notes />
+    </div>
   )
 }
 export default Home
