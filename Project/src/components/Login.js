@@ -3,12 +3,13 @@ import React from 'react'
 const Login = () => {
   return (
     <>
-    <div className='flex bg-[#fbfbfb] rounded-md shadow-amber-700 h-3/4 w-96'>
+    <div className='w-full min-h-screen flex justify-center'>
+    <div className='flex bg-[#fbfbfb] rounded-md h-3/4 w-1/3 justify-center my-4 bg-gradient-to-r from-cyan-500 to-blue-500 '>
     <div className='px-12 py-19'>
     <div className='tracking-wider pb-18 pt-13'>
         <h2 className='text-center p-8'>Login</h2>
     </div> 
-  <form action="">
+  <form className="flex items-center" action="">
     <div className='align-left'>
       <label htmlFor="" className='flex'>Email address: </label>
       <input type="email" className='' />
@@ -26,6 +27,7 @@ const Login = () => {
   </form>
     </div> 
     </div> 
+    </div>
   </>
   )
 }

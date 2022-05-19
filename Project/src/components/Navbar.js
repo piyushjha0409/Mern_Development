@@ -11,7 +11,7 @@ const Navbar = () => {
   
   return (
     <>
-      <header className='box-border m-0 p-0 bg-teal-300 font-bold font-xs font-poppins'>
+      <header className='box-border m-0 p-0 font-bold font-xs font-poppins bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
         <nav className='flex justify-between items-center'>
             <img className="h-14 m-1 p-1 border-none rounded-xl" src={Logo} alt="logo" />
           <ul className='inline'>
@@ -19,8 +19,8 @@ const Navbar = () => {
             <li className={`inline ml-12 px-6 hover:text-amber-200 ${location.pathname ==='/about'? 'text-violet-700':''}`}><a href={'/about'}>About</a></li>
           </ul>
         <div className="text-lime-50">
-        <button className='px-1 bg-amber-200 m-2 rounded-2xl text-black hover:bg-black hover:text-white'><a href="/login">Login</a></button>
-        <button className='px-1 bg-amber-200 hover:bg-black text-black hover:text-white m-1 rounded-2xl ' ><a href='#'>SignUp</a></button>
+        <button className='px-2 bg-amber-200 m-2 rounded-xl text-black hover:bg-black hover:text-white'><a href="/login">Login</a></button>
+        <button className='px-2 bg-amber-200 hover:bg-black text-black hover:text-white m-1 rounded-xl ' ><a href='#'>SignUp</a></button>
         </div>
         </nav>
       </header>

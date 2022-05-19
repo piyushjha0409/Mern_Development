@@ -7,7 +7,7 @@ const context = useContext(noteContext);
 const {notes, setnotes} = context;
   return (
     <div>
-        <h2> Your Notes: </h2>
+        <h2 className='text-white mx-1'> Your Notes: </h2>
         {notes.map((note)=>{
             return <NoteItem note={note}/>;
         })}
