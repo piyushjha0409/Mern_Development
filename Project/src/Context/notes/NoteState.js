@@ -25,7 +25,7 @@ const noteInitial = [
   const [notes, setnotes] = useState(noteInitial)
 
   //Add a note
- const addNote = (title , description)=>{
+  const addNote = (title , description)=>{
    //TODO: API CALL
    console.log("Adding the note")
    const note = { //yeh jo naam hai yeh useState waale naam se alag hona chahiye 
