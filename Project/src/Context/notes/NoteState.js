@@ -27,7 +27,8 @@ const noteInitial = [
   //Add a note
  const addNote = (title , description)=>{
    //TODO: API CALL
-   const note = {
+   console.log("Adding the note")
+   const note = { //yeh jo naam hai yeh useState waale naam se alag hona chahiye 
     "_id": "6279431c24a0905c2a9533f42",
     "user": "6262d0df35d0738d546a38da",
     "title": "My Title added",
@@ -35,15 +36,15 @@ const noteInitial = [
     "date": "2022-05-09T16:36:44.340Z",
     "__v": 0
    };
-   setnotes(notes.push(note));
+   setnotes(notes.concat(note));
  }
   //Delete the note
  const delNote = (title , description)=>{
-   console.window("Deleting the note")
+   console.log("Deleting the note")
    const note = {
     "_id": "6279431c24a0905c2a9533f42",
     "user": "6262d0df35d0738d546a38da",
-    "title": "Ayush Jha",
+    "title": "Title Deleted",
     "description": "Mai Bhopali hun",
     "date": "2022-05-09T16:36:44.340Z",
     "__v": 0
@@ -51,7 +52,7 @@ const noteInitial = [
  }
   //Update the note
   const editNote = (title, description)=>{
-    console.window("Editing the note")
+    console.log("Editing the note")
   }
 return(
     <noteContext.Provider value={{notes, setnotes}}>

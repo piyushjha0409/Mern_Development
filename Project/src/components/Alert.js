@@ -3,7 +3,7 @@ import React from 'react'
 const Alert = (props) => {
   return (
     <div>
-     <div className='bg-gradient-to-r from-red-700 to-orange-200'>
+     <div className='bg-[#eddcd9] text-black p-2'>
          {props.message}
      </div>
     </div>
