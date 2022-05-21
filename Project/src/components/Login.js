@@ -16,8 +16,8 @@ const Login = () => {
       <div className='text-sm mb-2'>We will never share your email with anyone!</div>
 
       <label htmlFor="" className='flex pt-2'>Password: </label>
-      <input type='checkbox' className=''/>
       <input type="password" className='flex' />
+      <input type='checkbox' className=''/>
       <label className='px-1 text-sm'>check me out</label>
       <br/>
       <div className='flex justify-center'>
