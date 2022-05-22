@@ -5,13 +5,13 @@ import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   let location = useLocation();
 
-  useEffect(() =>{
-    console.log(location.pathname);
-  }, [location]);
+  // useEffect(() =>{
+  //   console.log(location.pathname);
+  // }, [location]);
   
   return (
     <>
-      <header className='box-border m-0 p-0 font-bold font-xs font-poppins bg-black sticky top-0 z-[100]'>
+      <header className='box-border m-0 p-0 font-bold font-xs font-poppins bg-neutral-900 sticky top-0 z-[100]'>
         <nav className='flex justify-between items-center'>
           <div className='flex items-center'>
             <img className="h-14 m-1 p-1 border-none rounded-xl" src={Logo} alt="logo" />
