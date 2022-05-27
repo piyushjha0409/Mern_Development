@@ -89,6 +89,7 @@ router.delete('/deleteNote/:id', fetchuser, async(req, res)=>{
         }
         // Matching the existing user id 
         if(note.user.toString() !== req.user.id){
+            // console.log(note.user.toString())
             return res.status(401).send("Not Allowed!");
         }
 

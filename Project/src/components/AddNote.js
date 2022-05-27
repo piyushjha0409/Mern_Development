@@ -18,13 +18,15 @@ const AddNote = () => {
  }
 
   return (
-    <div className='bg-[#e99f4c]'>
+    <div className='bg-slate-300'>
       <h1 className='flex justify-center'>Add notes:</h1>
       <div className='m-2'>
-        <label className='mx-1 p-2 flex'>Title of the note:</label>
-        <input type='text' className='flex mx-2 w-2/5 rounded-md text-black' id='title' name='title' onChange={onChange}/>
-        <label className='mx-1 mt-2 p-2 flex'>Description:</label>
-        <textarea type='text-area' size='50' className='flex mx-2 w-4/5 h-60 rounded-md text-black' id='description' name='description' onChange={onChange} /><br/>
+        <label className='mx-1 p-2 flex text-black'>Title of the note:</label>
+        <input type='text' className='flex mx-3 w-2/5 rounded-md text-black' id='title' name='title' onChange={onChange}/>
+        <label className='mx-1 mt-2 p-2 flex text-black' >Tag:</label>
+        <input type='text' className='flex mx-3 w-2/5 rounded-md text-black' id='tag' name='tag' onChange={onChange}/>
+        <label className='mx-1 mt-2 p-2 flex text-black'>Description:</label>
+        <textarea type='text-area' size='50' className='flex mx-3 w-4/5 h-60 rounded-md text-black' id='description' name='description' onChange={onChange} /><br/>
         <button type="button" className='bg-[#eddcd9] text-black hover:text-white m-2 p-2 rounded-2xl hover:bg-black' onClick={handleClick} >Add Note</button>
       </div>
     </div>
